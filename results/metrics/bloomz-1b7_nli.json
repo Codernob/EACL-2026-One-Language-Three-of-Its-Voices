@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.3393574297188755,
+  "precision": 0.23360214579399674,
+  "recall": 0.33352762813153164,
+  "f1": 0.2033090707123856,
+  "confusion_matrix": [
+    [
+      22,
+      3,
+      310
+    ],
+    [
+      20,
+      0,
+      303
+    ],
+    [
+      19,
+      3,
+      316
+    ]
+  ],
+  "per_class": {
+    "entailment": {
+      "precision": 0.36065573770491804,
+      "recall": 0.06567164179104477,
+      "f1-score": 0.1111111111111111,
+      "support": 335.0
+    },
+    "neutral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 323.0
+    },
+    "contradiction": {
+      "precision": 0.3401506996770721,
+      "recall": 0.9349112426035503,
+      "f1-score": 0.4988161010260458,
+      "support": 338.0
+    },
+    "accuracy": 0.3393574297188755,
+    "macro avg": {
+      "precision": 0.23360214579399674,
+      "recall": 0.33352762813153164,
+      "f1-score": 0.2033090707123856,
+      "support": 996.0
+    },
+    "weighted avg": {
+      "precision": 0.23673755885742764,
+      "recall": 0.3393574297188755,
+      "f1-score": 0.2066486590050459,
+      "support": 996.0
+    }
+  },
+  "valid_predictions": 996,
+  "total": 1000,
+  "unknown_rate": 0.004,
+  "error_analysis": {
+    "error_distribution": {
+      "entailment->neutral": 3,
+      "entailment->contradiction": 310,
+      "neutral->entailment": 20,
+      "neutral->contradiction": 303,
+      "contradiction->entailment": 19,
+      "contradiction->neutral": 3,
+      "unknown": 4
+    },
+    "top_errors": [
+      [
+        "entailment->contradiction",
+        310
+      ],
+      [
+        "neutral->contradiction",
+        303
+      ],
+      [
+        "neutral->entailment",
+        20
+      ],
+      [
+        "contradiction->entailment",
+        19
+      ],
+      [
+        "unknown",
+        4
+      ]
+    ]
+  },
+  "model": "bloomz-1b7",
+  "task": "nli",
+  "num_samples": 1000,
+  "inference_time_seconds": 47.29900789260864
+}

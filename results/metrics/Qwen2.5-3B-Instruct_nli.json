@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.639,
+  "precision": 0.7143557618335067,
+  "recall": 0.6434478439371991,
+  "f1": 0.5933732393103863,
+  "confusion_matrix": [
+    [
+      270,
+      56,
+      9
+    ],
+    [
+      16,
+      305,
+      5
+    ],
+    [
+      51,
+      224,
+      64
+    ]
+  ],
+  "per_class": {
+    "entailment": {
+      "precision": 0.8011869436201781,
+      "recall": 0.8059701492537313,
+      "f1-score": 0.8035714285714286,
+      "support": 335.0
+    },
+    "neutral": {
+      "precision": 0.5213675213675214,
+      "recall": 0.9355828220858896,
+      "f1-score": 0.6695938529088913,
+      "support": 326.0
+    },
+    "contradiction": {
+      "precision": 0.8205128205128205,
+      "recall": 0.1887905604719764,
+      "f1-score": 0.3069544364508393,
+      "support": 339.0
+    },
+    "accuracy": 0.639,
+    "macro avg": {
+      "precision": 0.7143557618335067,
+      "recall": 0.6434478439371991,
+      "f1-score": 0.5933732393103863,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.7165172842324178,
+      "recall": 0.639,
+      "f1-score": 0.5915415785765616,
+      "support": 1000.0
+    }
+  },
+  "valid_predictions": 1000,
+  "total": 1000,
+  "unknown_rate": 0.0,
+  "error_analysis": {
+    "error_distribution": {
+      "entailment->neutral": 56,
+      "entailment->contradiction": 9,
+      "neutral->entailment": 16,
+      "neutral->contradiction": 5,
+      "contradiction->entailment": 51,
+      "contradiction->neutral": 224,
+      "unknown": 0
+    },
+    "top_errors": [
+      [
+        "contradiction->neutral",
+        224
+      ],
+      [
+        "entailment->neutral",
+        56
+      ],
+      [
+        "contradiction->entailment",
+        51
+      ],
+      [
+        "neutral->entailment",
+        16
+      ],
+      [
+        "entailment->contradiction",
+        9
+      ]
+    ]
+  },
+  "model": "Qwen2.5-3B-Instruct",
+  "task": "nli",
+  "num_samples": 1000,
+  "inference_time_seconds": 109.53123140335083
+}

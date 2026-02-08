@@ -1,0 +1,11 @@
+{
+  "exact_match": 10.100000000000001,
+  "f1": 23.644699245056703,
+  "exact_match_std": 30.13287241535397,
+  "f1_std": 34.62844983660682,
+  "total": 1000,
+  "model": "bloomz-1b7",
+  "task": "qa",
+  "num_samples": 1000,
+  "inference_time_seconds": 134.8946270942688
+}

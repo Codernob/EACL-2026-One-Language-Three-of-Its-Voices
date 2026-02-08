@@ -1,0 +1,79 @@
+{
+  "bleu": 2.7374534924890686,
+  "chrf": 22.57328367594056,
+  "bleu_details": {
+    "precisions": [
+      20.06980147859046,
+      3.2985028072364315,
+      1.2617144711753012,
+      0.6723044397463002
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.237840851024295
+  },
+  "sample_bleu_mean": 3.6831532308886086,
+  "sample_bleu_std": 4.904370076594193,
+  "total": 999,
+  "model": "bloomz-3b",
+  "task": "mt",
+  "num_samples": 999,
+  "source_analysis": {
+    "flores200": {
+      "num_samples": 822,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 2.944284312155804,
+      "exact_match": null
+    },
+    "tatoeba": {
+      "num_samples": 177,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 0.06685928111888753,
+      "exact_match": null
+    }
+  },
+  "variant_breakdown": {
+    "dari": {
+      "num_samples": 333,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 4.353352974322327,
+      "chrf": 25.96069171319971,
+      "exact_match": null
+    },
+    "persian": {
+      "num_samples": 333,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 2.417182397619723,
+      "chrf": 22.65801144320772,
+      "exact_match": null
+    },
+    "tajik": {
+      "num_samples": 333,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 1.1327528159562967,
+      "chrf": 19.109348001888907,
+      "exact_match": null
+    }
+  },
+  "variant_analysis": {
+    "variant_scores": {
+      "dari": 4.353352974322327,
+      "persian": 2.417182397619723,
+      "tajik": 1.1327528159562967
+    },
+    "mean_score": 2.6344293959661154,
+    "std_score": 1.3237480975711133,
+    "min_score": 1.1327528159562967,
+    "max_score": 4.353352974322327,
+    "score_range": 3.22060015836603,
+    "metric_used": "bleu",
+    "best_variant": "dari",
+    "worst_variant": "tajik",
+    "performance_gap": 3.22060015836603
+  },
+  "inference_time_seconds": 586.2496070861816
+}

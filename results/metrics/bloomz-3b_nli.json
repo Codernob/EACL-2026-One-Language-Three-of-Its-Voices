@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.3543788187372709,
+  "precision": 0.366933366933367,
+  "recall": 0.3476723796917553,
+  "f1": 0.24840321036166665,
+  "confusion_matrix": [
+    [
+      50,
+      6,
+      271
+    ],
+    [
+      23,
+      4,
+      293
+    ],
+    [
+      38,
+      3,
+      294
+    ]
+  ],
+  "per_class": {
+    "entailment": {
+      "precision": 0.45045045045045046,
+      "recall": 0.1529051987767584,
+      "f1-score": 0.228310502283105,
+      "support": 327.0
+    },
+    "neutral": {
+      "precision": 0.3076923076923077,
+      "recall": 0.0125,
+      "f1-score": 0.024024024024024024,
+      "support": 320.0
+    },
+    "contradiction": {
+      "precision": 0.34265734265734266,
+      "recall": 0.8776119402985074,
+      "f1-score": 0.4928751047778709,
+      "support": 335.0
+    },
+    "accuracy": 0.3543788187372709,
+    "macro avg": {
+      "precision": 0.366933366933367,
+      "recall": 0.3476723796917553,
+      "f1-score": 0.24840321036166665,
+      "support": 982.0
+    },
+    "weighted avg": {
+      "precision": 0.3671578875244863,
+      "recall": 0.3543788187372709,
+      "f1-score": 0.2519942790578918,
+      "support": 982.0
+    }
+  },
+  "valid_predictions": 982,
+  "total": 1000,
+  "unknown_rate": 0.018,
+  "error_analysis": {
+    "error_distribution": {
+      "entailment->neutral": 6,
+      "entailment->contradiction": 271,
+      "neutral->entailment": 23,
+      "neutral->contradiction": 293,
+      "contradiction->entailment": 38,
+      "contradiction->neutral": 3,
+      "unknown": 18
+    },
+    "top_errors": [
+      [
+        "neutral->contradiction",
+        293
+      ],
+      [
+        "entailment->contradiction",
+        271
+      ],
+      [
+        "contradiction->entailment",
+        38
+      ],
+      [
+        "neutral->entailment",
+        23
+      ],
+      [
+        "unknown",
+        18
+      ]
+    ]
+  },
+  "model": "bloomz-3b",
+  "task": "nli",
+  "num_samples": 1000,
+  "inference_time_seconds": 49.78276515007019
+}

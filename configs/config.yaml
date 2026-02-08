@@ -1,0 +1,101 @@
+# Configuration for Persian LLM Evaluation
+
+paths:
+  data_dir: "data"
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  results_dir: "results"
+  predictions_dir: "results/predictions"
+  metrics_dir: "results/metrics"
+  figures_dir: "results/figures"
+
+# Models from 3 Different Families
+models:
+  # Family 1: Qwen
+  - name: "Qwen2.5-1.5B-Instruct"
+    hf_id: "Qwen/Qwen2.5-1.5B-Instruct"
+    type: "causal"
+    quantization: "none"
+    max_new_tokens: 128
+    
+  - name: "Qwen2.5-3B-Instruct"
+    hf_id: "Qwen/Qwen2.5-3B-Instruct"
+    type: "causal"
+    quantization: "none"
+    max_new_tokens: 128
+
+  # Family 2: BLOOMZ
+  - name: "bloomz-1b7"
+    hf_id: "bigscience/bloomz-1b7"
+    type: "causal"
+    quantization: "none"
+    max_new_tokens: 128
+    
+  - name: "bloomz-3b"
+    hf_id: "bigscience/bloomz-3b"
+    type: "causal"
+    quantization: "none"
+    max_new_tokens: 128
+  
+  # Family 3: Gemma (Persian fine-tuned)
+  - name: "gemma-3-4b-persian"
+    hf_id: "mshojaei77/gemma-3-4b-persian-v0"
+    type: "causal"
+    quantization: "none"
+    max_new_tokens: 128
+
+# Tasks - NOTE: Only MT has multi-variant coverage
+tasks:
+  sentiment:
+    enabled: true
+    labels: ["negative", "neutral", "positive"]
+    metric: "accuracy"
+    variants_available: ["persian_standard"]  # Only Iranian Persian
+    prompt_language: "persian"  # Changed from English to Persian
+    
+  mt:
+    enabled: true
+    source_langs: ["pes", "prs", "tgk"]
+    target_lang: "eng"
+    metrics: ["bleu", "chrf"]
+    variants_available: ["persian", "dari", "tajik"]
+    prompt_language: "persian"
+    bleu_config:
+      tokenize: "13a"  # Standard tokenization
+      lowercase: false
+      smooth_method: "exp"
+    
+  nli:
+    enabled: true
+    labels: ["entailment", "neutral", "contradiction"]
+    metric: "accuracy"
+    variants_available: ["persian_standard"]  # Only Iranian Persian
+    prompt_language: "persian"
+    
+  qa:
+    enabled: true
+    metrics: ["exact_match", "f1"]
+    variants_available: ["persian_standard"]  # Only Iranian Persian
+    prompt_language: "persian"
+
+# Evaluation settings
+evaluation:
+  batch_size: 1  
+  num_samples: 1000  # null = use entire dataset; set integer to limit samples
+  use_full_dataset: false  # set true to Use complete test sets
+  seed: 42
+  temperature: 0.0
+  do_sample: true
+  num_return_sequences: 1
+  # Reproducibility controls
+  deterministic: true
+  
+# Text normalization 
+normalization:
+  apply_normalization: false  # Don't normalize by default to preserve variant differences
+  normalize_for_metrics_only: true  # Only normalize during metric computation
+
+# Structured output enforcement
+structured_output:
+  use_constrained_decoding: true  # Force valid label output where possible
+  max_retries: 3  # Retry parsing on failure

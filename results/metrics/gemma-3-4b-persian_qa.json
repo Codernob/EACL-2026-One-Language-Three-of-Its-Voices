@@ -1,0 +1,11 @@
+{
+  "exact_match": 41.0,
+  "f1": 68.37342464942706,
+  "exact_match_std": 49.18333050943175,
+  "f1_std": 35.83438164310748,
+  "total": 1000,
+  "model": "gemma-3-4b-persian",
+  "task": "qa",
+  "num_samples": 1000,
+  "inference_time_seconds": 662.0128417015076
+}

@@ -1,0 +1,119 @@
+{
+  "accuracy": 0.74,
+  "precision": 0.6387311664397592,
+  "recall": 0.644274384857418,
+  "f1": 0.6291611254422131,
+  "confusion_matrix": [
+    [
+      315,
+      13,
+      16
+    ],
+    [
+      35,
+      28,
+      25
+    ],
+    [
+      134,
+      37,
+      397
+    ]
+  ],
+  "per_class": {
+    "negative": {
+      "precision": 0.6508264462809917,
+      "recall": 0.9156976744186046,
+      "f1-score": 0.7608695652173914,
+      "support": 344.0
+    },
+    "neutral": {
+      "precision": 0.358974358974359,
+      "recall": 0.3181818181818182,
+      "f1-score": 0.3373493975903614,
+      "support": 88.0
+    },
+    "positive": {
+      "precision": 0.906392694063927,
+      "recall": 0.698943661971831,
+      "f1-score": 0.7892644135188867,
+      "support": 568.0
+    },
+    "accuracy": 0.74,
+    "macro avg": {
+      "precision": 0.6387311664397592,
+      "recall": 0.644274384857418,
+      "f1-score": 0.6291611254422131,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.7703050913387153,
+      "recall": 0.74,
+      "f1-score": 0.7397280643014621,
+      "support": 1000.0
+    }
+  },
+  "valid_predictions": 1000,
+  "total": 1000,
+  "unknown_rate": 0.0,
+  "error_analysis": {
+    "error_distribution": {
+      "negative->neutral": 13,
+      "negative->positive": 16,
+      "neutral->negative": 35,
+      "neutral->positive": 25,
+      "positive->negative": 134,
+      "positive->neutral": 37,
+      "unknown": 0
+    },
+    "top_errors": [
+      [
+        "positive->negative",
+        134
+      ],
+      [
+        "positive->neutral",
+        37
+      ],
+      [
+        "neutral->negative",
+        35
+      ],
+      [
+        "neutral->positive",
+        25
+      ],
+      [
+        "negative->positive",
+        16
+      ]
+    ]
+  },
+  "model": "Qwen2.5-3B-Instruct",
+  "task": "sentiment",
+  "num_samples": 1000,
+  "source_analysis": {
+    "snappfood": {
+      "num_samples": 436,
+      "accuracy": 0.786697247706422,
+      "f1": 0.5262796730310982,
+      "bleu": null,
+      "exact_match": null
+    },
+    "digikala": {
+      "num_samples": 462,
+      "accuracy": 0.7229437229437229,
+      "f1": 0.556219825075693,
+      "bleu": null,
+      "exact_match": null
+    },
+    "sentipers": {
+      "num_samples": 102,
+      "accuracy": 0.6176470588235294,
+      "f1": 0.5567099567099567,
+      "bleu": null,
+      "exact_match": null
+    }
+  },
+  "inference_time_seconds": 84.26587629318237
+}

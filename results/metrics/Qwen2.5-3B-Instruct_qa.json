@@ -1,0 +1,11 @@
+{
+  "exact_match": 6.1,
+  "f1": 37.37432910238099,
+  "exact_match_std": 23.933031567271208,
+  "f1_std": 28.41353063629296,
+  "total": 1000,
+  "model": "Qwen2.5-3B-Instruct",
+  "task": "qa",
+  "num_samples": 1000,
+  "inference_time_seconds": 1706.9252767562866
+}

@@ -1,0 +1,119 @@
+{
+  "accuracy": 0.496,
+  "precision": 0.3609748095042213,
+  "recall": 0.3745297720076626,
+  "f1": 0.35262791530918197,
+  "confusion_matrix": [
+    [
+      210,
+      6,
+      128
+    ],
+    [
+      45,
+      1,
+      42
+    ],
+    [
+      273,
+      10,
+      285
+    ]
+  ],
+  "per_class": {
+    "negative": {
+      "precision": 0.3977272727272727,
+      "recall": 0.6104651162790697,
+      "f1-score": 0.481651376146789,
+      "support": 344.0
+    },
+    "neutral": {
+      "precision": 0.058823529411764705,
+      "recall": 0.011363636363636364,
+      "f1-score": 0.01904761904761905,
+      "support": 88.0
+    },
+    "positive": {
+      "precision": 0.6263736263736264,
+      "recall": 0.5017605633802817,
+      "f1-score": 0.5571847507331378,
+      "support": 568.0
+    },
+    "accuracy": 0.496,
+    "macro avg": {
+      "precision": 0.3609748095042213,
+      "recall": 0.3745297720076626,
+      "f1-score": 0.35262791530918197,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.4977748721866369,
+      "recall": 0.49600000000000005,
+      "f1-score": 0.48384520228710814,
+      "support": 1000.0
+    }
+  },
+  "valid_predictions": 1000,
+  "total": 1000,
+  "unknown_rate": 0.0,
+  "error_analysis": {
+    "error_distribution": {
+      "negative->neutral": 6,
+      "negative->positive": 128,
+      "neutral->negative": 45,
+      "neutral->positive": 42,
+      "positive->negative": 273,
+      "positive->neutral": 10,
+      "unknown": 0
+    },
+    "top_errors": [
+      [
+        "positive->negative",
+        273
+      ],
+      [
+        "negative->positive",
+        128
+      ],
+      [
+        "neutral->negative",
+        45
+      ],
+      [
+        "neutral->positive",
+        42
+      ],
+      [
+        "positive->neutral",
+        10
+      ]
+    ]
+  },
+  "model": "bloomz-1b7",
+  "task": "sentiment",
+  "num_samples": 1000,
+  "source_analysis": {
+    "snappfood": {
+      "num_samples": 436,
+      "accuracy": 0.5527522935779816,
+      "f1": 0.37081335825140166,
+      "bleu": null,
+      "exact_match": null
+    },
+    "digikala": {
+      "num_samples": 462,
+      "accuracy": 0.49567099567099565,
+      "f1": 0.3458646616541354,
+      "bleu": null,
+      "exact_match": null
+    },
+    "sentipers": {
+      "num_samples": 102,
+      "accuracy": 0.2549019607843137,
+      "f1": 0.19818199980021975,
+      "bleu": null,
+      "exact_match": null
+    }
+  },
+  "inference_time_seconds": 34.25303626060486
+}

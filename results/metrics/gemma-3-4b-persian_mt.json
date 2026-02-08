@@ -1,0 +1,79 @@
+{
+  "bleu": 23.28501818009198,
+  "chrf": 50.79339001108728,
+  "bleu_details": {
+    "precisions": [
+      52.98862734726263,
+      27.896896758426706,
+      17.372389791183295,
+      11.447435246317928
+    ],
+    "brevity_penalty": 1.0,
+    "length_ratio": 1.053839364518976
+  },
+  "sample_bleu_mean": 19.832657757729287,
+  "sample_bleu_std": 16.581461967385376,
+  "total": 999,
+  "model": "gemma-3-4b-persian",
+  "task": "mt",
+  "num_samples": 999,
+  "source_analysis": {
+    "flores200": {
+      "num_samples": 822,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 25.018463963088102,
+      "exact_match": null
+    },
+    "tatoeba": {
+      "num_samples": 177,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 0.20401696733422242,
+      "exact_match": null
+    }
+  },
+  "variant_breakdown": {
+    "dari": {
+      "num_samples": 333,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 29.03973923511801,
+      "chrf": 56.96121174972296,
+      "exact_match": null
+    },
+    "persian": {
+      "num_samples": 333,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 20.634943124349867,
+      "chrf": 45.79268527451144,
+      "exact_match": null
+    },
+    "tajik": {
+      "num_samples": 333,
+      "accuracy": null,
+      "f1": null,
+      "bleu": 19.325713457127026,
+      "chrf": 47.8247231230789,
+      "exact_match": null
+    }
+  },
+  "variant_analysis": {
+    "variant_scores": {
+      "dari": 29.03973923511801,
+      "persian": 20.634943124349867,
+      "tajik": 19.325713457127026
+    },
+    "mean_score": 23.000131938864968,
+    "std_score": 4.303964281148164,
+    "min_score": 19.325713457127026,
+    "max_score": 29.03973923511801,
+    "score_range": 9.714025777990983,
+    "metric_used": "bleu",
+    "best_variant": "dari",
+    "worst_variant": "tajik",
+    "performance_gap": 9.714025777990983
+  },
+  "inference_time_seconds": 1219.9880797863007
+}

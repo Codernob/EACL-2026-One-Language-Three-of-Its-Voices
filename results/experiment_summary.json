@@ -1,0 +1,612 @@
+{
+  "timestamp": "2026-01-14T15:11:13.532452",
+  "total_runtime_minutes": 161.5250303506851,
+  "config": {
+    "models": [
+      "Qwen2.5-1.5B-Instruct",
+      "Qwen2.5-3B-Instruct",
+      "bloomz-1b7",
+      "bloomz-3b",
+      "gemma-3-4b-persian"
+    ],
+    "tasks": [
+      "sentiment",
+      "mt",
+      "nli",
+      "qa"
+    ],
+    "num_samples": 1000,
+    "use_full_dataset": false,
+    "seed": 42,
+    "deterministic": true,
+    "normalization_applied": false
+  },
+  "scope_limitations": {
+    "sentiment": {
+      "variants_available": [
+        "persian_standard"
+      ],
+      "prompt_language": "persian",
+      "multi_variant_coverage": false
+    },
+    "mt": {
+      "variants_available": [
+        "persian",
+        "dari",
+        "tajik"
+      ],
+      "prompt_language": "persian",
+      "multi_variant_coverage": true
+    },
+    "nli": {
+      "variants_available": [
+        "persian_standard"
+      ],
+      "prompt_language": "persian",
+      "multi_variant_coverage": false
+    },
+    "qa": {
+      "variants_available": [
+        "persian_standard"
+      ],
+      "prompt_language": "persian",
+      "multi_variant_coverage": false
+    }
+  },
+  "dataset_coverage": {
+    "using_full_test_sets": false,
+    "sample_limitation": 1000
+  },
+  "results_summary": {
+    "Qwen2.5-1.5B-Instruct_sentiment": {
+      "accuracy": 0.727,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.5789920947255714,
+      "exact_match": null,
+      "inference_time": 64.671466588974,
+      "source_analysis": {
+        "snappfood": {
+          "num_samples": 436,
+          "accuracy": 0.7660550458715596,
+          "f1": 0.5140548659556989,
+          "bleu": null,
+          "exact_match": null
+        },
+        "digikala": {
+          "num_samples": 462,
+          "accuracy": 0.7445887445887446,
+          "f1": 0.5677885348709312,
+          "bleu": null,
+          "exact_match": null
+        },
+        "sentipers": {
+          "num_samples": 102,
+          "accuracy": 0.4803921568627451,
+          "f1": 0.41021021021021015,
+          "bleu": null,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "Qwen2.5-1.5B-Instruct_mt": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": 4.613311546546337,
+      "f1": null,
+      "exact_match": null,
+      "inference_time": 1240.1282279491425,
+      "source_analysis": {
+        "flores200": {
+          "num_samples": 822,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 5.026465606249288,
+          "exact_match": null
+        },
+        "tatoeba": {
+          "num_samples": 177,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 0.11000519903327154,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": {
+        "dari": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 10.250480978763491,
+          "chrf": 41.004755707604154,
+          "exact_match": null
+        },
+        "persian": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 6.244150758158761,
+          "chrf": 33.314499246877226,
+          "exact_match": null
+        },
+        "tajik": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 0.8019199502833718,
+          "chrf": 23.98981655473202,
+          "exact_match": null
+        }
+      },
+      "notes": []
+    },
+    "Qwen2.5-1.5B-Instruct_nli": {
+      "accuracy": 0.5615615615615616,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.5104159798949645,
+      "exact_match": null,
+      "inference_time": 103.75708103179932,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "Qwen2.5-1.5B-Instruct_qa": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 35.215008952179666,
+      "exact_match": 10.8,
+      "inference_time": 1001.6311721801758,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "Qwen2.5-3B-Instruct_sentiment": {
+      "accuracy": 0.74,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.6291611254422131,
+      "exact_match": null,
+      "inference_time": 84.26587629318237,
+      "source_analysis": {
+        "snappfood": {
+          "num_samples": 436,
+          "accuracy": 0.786697247706422,
+          "f1": 0.5262796730310982,
+          "bleu": null,
+          "exact_match": null
+        },
+        "digikala": {
+          "num_samples": 462,
+          "accuracy": 0.7229437229437229,
+          "f1": 0.556219825075693,
+          "bleu": null,
+          "exact_match": null
+        },
+        "sentipers": {
+          "num_samples": 102,
+          "accuracy": 0.6176470588235294,
+          "f1": 0.5567099567099567,
+          "bleu": null,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "Qwen2.5-3B-Instruct_mt": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": 7.588324001083062,
+      "f1": null,
+      "exact_match": null,
+      "inference_time": 1662.0984506607056,
+      "source_analysis": {
+        "flores200": {
+          "num_samples": 822,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 9.092888896846302,
+          "exact_match": null
+        },
+        "tatoeba": {
+          "num_samples": 177,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 0.06334513802807948,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": {
+        "dari": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 16.37080349594735,
+          "chrf": 48.96335088110849,
+          "exact_match": null
+        },
+        "persian": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 6.679304091623219,
+          "chrf": 36.509735277611064,
+          "exact_match": null
+        },
+        "tajik": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 2.3182965375427966,
+          "chrf": 27.879899053217656,
+          "exact_match": null
+        }
+      },
+      "notes": []
+    },
+    "Qwen2.5-3B-Instruct_nli": {
+      "accuracy": 0.639,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.5933732393103863,
+      "exact_match": null,
+      "inference_time": 109.53123140335083,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "Qwen2.5-3B-Instruct_qa": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 37.37432910238099,
+      "exact_match": 6.1,
+      "inference_time": 1706.9252767562866,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "bloomz-1b7_sentiment": {
+      "accuracy": 0.496,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.35262791530918197,
+      "exact_match": null,
+      "inference_time": 34.25303626060486,
+      "source_analysis": {
+        "snappfood": {
+          "num_samples": 436,
+          "accuracy": 0.5527522935779816,
+          "f1": 0.37081335825140166,
+          "bleu": null,
+          "exact_match": null
+        },
+        "digikala": {
+          "num_samples": 462,
+          "accuracy": 0.49567099567099565,
+          "f1": 0.3458646616541354,
+          "bleu": null,
+          "exact_match": null
+        },
+        "sentipers": {
+          "num_samples": 102,
+          "accuracy": 0.2549019607843137,
+          "f1": 0.19818199980021975,
+          "bleu": null,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "bloomz-1b7_mt": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": 2.3509488406173875,
+      "f1": null,
+      "exact_match": null,
+      "inference_time": 473.1864845752716,
+      "source_analysis": {
+        "flores200": {
+          "num_samples": 822,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 2.526050617320152,
+          "exact_match": null
+        },
+        "tatoeba": {
+          "num_samples": 177,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 0.1505782772854354,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": {
+        "dari": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 3.4195090901585004,
+          "chrf": 24.814264593494183,
+          "exact_match": null
+        },
+        "persian": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 2.3547479040606425,
+          "chrf": 20.724718151109144,
+          "exact_match": null
+        },
+        "tajik": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 1.0496137763508986,
+          "chrf": 17.91037211778441,
+          "exact_match": null
+        }
+      },
+      "notes": []
+    },
+    "bloomz-1b7_nli": {
+      "accuracy": 0.3393574297188755,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.2033090707123856,
+      "exact_match": null,
+      "inference_time": 47.29900789260864,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "bloomz-1b7_qa": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 23.644699245056703,
+      "exact_match": 10.100000000000001,
+      "inference_time": 134.8946270942688,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "bloomz-3b_sentiment": {
+      "accuracy": 0.483,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.3378022715630686,
+      "exact_match": null,
+      "inference_time": 48.071654081344604,
+      "source_analysis": {
+        "snappfood": {
+          "num_samples": 436,
+          "accuracy": 0.6077981651376146,
+          "f1": 0.3967563679168165,
+          "bleu": null,
+          "exact_match": null
+        },
+        "digikala": {
+          "num_samples": 462,
+          "accuracy": 0.43722943722943725,
+          "f1": 0.3068555008210181,
+          "bleu": null,
+          "exact_match": null
+        },
+        "sentipers": {
+          "num_samples": 102,
+          "accuracy": 0.1568627450980392,
+          "f1": 0.12870996179841315,
+          "bleu": null,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "bloomz-3b_mt": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": 2.7374534924890686,
+      "f1": null,
+      "exact_match": null,
+      "inference_time": 586.2496070861816,
+      "source_analysis": {
+        "flores200": {
+          "num_samples": 822,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 2.944284312155804,
+          "exact_match": null
+        },
+        "tatoeba": {
+          "num_samples": 177,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 0.06685928111888753,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": {
+        "dari": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 4.353352974322327,
+          "chrf": 25.96069171319971,
+          "exact_match": null
+        },
+        "persian": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 2.417182397619723,
+          "chrf": 22.65801144320772,
+          "exact_match": null
+        },
+        "tajik": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 1.1327528159562967,
+          "chrf": 19.109348001888907,
+          "exact_match": null
+        }
+      },
+      "notes": []
+    },
+    "bloomz-3b_nli": {
+      "accuracy": 0.3543788187372709,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.24840321036166665,
+      "exact_match": null,
+      "inference_time": 49.78276515007019,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "bloomz-3b_qa": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 32.53132542654142,
+      "exact_match": 17.5,
+      "inference_time": 144.31663489341736,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "gemma-3-4b-persian_sentiment": {
+      "accuracy": 0.7727727727727728,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.6779309697931207,
+      "exact_match": null,
+      "inference_time": 114.65780353546143,
+      "source_analysis": {
+        "snappfood": {
+          "num_samples": 436,
+          "accuracy": 0.7931034482758621,
+          "f1": 0.5341638332303867,
+          "bleu": null,
+          "exact_match": null
+        },
+        "digikala": {
+          "num_samples": 462,
+          "accuracy": 0.7597402597402597,
+          "f1": 0.6207053112805867,
+          "bleu": null,
+          "exact_match": null
+        },
+        "sentipers": {
+          "num_samples": 102,
+          "accuracy": 0.7450980392156863,
+          "f1": 0.6998001394045433,
+          "bleu": null,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "gemma-3-4b-persian_mt": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": 23.28501818009198,
+      "f1": null,
+      "exact_match": null,
+      "inference_time": 1219.9880797863007,
+      "source_analysis": {
+        "flores200": {
+          "num_samples": 822,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 25.018463963088102,
+          "exact_match": null
+        },
+        "tatoeba": {
+          "num_samples": 177,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 0.20401696733422242,
+          "exact_match": null
+        }
+      },
+      "variant_breakdown": {
+        "dari": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 29.03973923511801,
+          "chrf": 56.96121174972296,
+          "exact_match": null
+        },
+        "persian": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 20.634943124349867,
+          "chrf": 45.79268527451144,
+          "exact_match": null
+        },
+        "tajik": {
+          "num_samples": 333,
+          "accuracy": null,
+          "f1": null,
+          "bleu": 19.325713457127026,
+          "chrf": 47.8247231230789,
+          "exact_match": null
+        }
+      },
+      "notes": []
+    },
+    "gemma-3-4b-persian_nli": {
+      "accuracy": 0.494,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 0.44229197616316435,
+      "exact_match": null,
+      "inference_time": 203.15022921562195,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    },
+    "gemma-3-4b-persian_qa": {
+      "accuracy": null,
+      "effective_accuracy": null,
+      "parsing_failure_rate": null,
+      "bleu": null,
+      "f1": 68.37342464942706,
+      "exact_match": 41.0,
+      "inference_time": 662.0128417015076,
+      "source_analysis": null,
+      "variant_breakdown": null,
+      "notes": []
+    }
+  }
+}
