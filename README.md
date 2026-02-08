@@ -41,11 +41,13 @@ This repository contains code for my recently accepted paper "One Language, Thre
 Download the datasets and keep them in their respective folders.
 
 Run this command to install required dependencies. I recommend to create a new python environment. 
+
 `pip install requirements.txt`
 
 An NVIDIA GPU required for training.
 
 and then run the script
+
 `python scripts\run_experiments.py`
 
 If you find my code useful in your work, do feel free to cite this repository.
