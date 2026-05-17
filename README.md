@@ -7,6 +7,9 @@ This repository contains code for my recently accepted paper "One Language, Thre
 
 Our paper is available at: https://aclanthology.org/2026.silkroadnlp-1.10/
 
+# Key Results
+<img width="1544" height="414" alt="image" src="https://github.com/user-attachments/assets/865589e4-f243-4240-9039-dae86c624c30" />
+
 # Datasets used
 
 ## Sentiment Analysis
