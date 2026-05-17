@@ -5,6 +5,8 @@
 
 This repository contains code for my recently accepted paper "One Language, Three of Its Voices: Evaluating Multilingual LLMs Across Persian, Dari, and Tajiki on Translation and Understanding Tasks" accepted at the SilkRoadNLP workshop under EACL 2026.
 
+Our paper is available at: https://aclanthology.org/2026.silkroadnlp-1.10/
+
 # Datasets used
 
 ## Sentiment Analysis
