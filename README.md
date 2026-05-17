@@ -52,6 +52,22 @@ and then run the script
 
 `python scripts\run_experiments.py`
 
-If you find my code useful in your work, do feel free to cite this repository.
+If you find my code useful in your work, do feel free to cite our paper:
 
-Citation and paper pdf will be provided once the paper comes online.
+```
+@inproceedings{arnob-mahi-2026-one,
+    title = "One Language, Three of Its Voices: Evaluating Multilingual {LLM}s Across {P}ersian, {D}ari, and {T}ajiki on Translation and Understanding Tasks",
+    author = "Arnob, Noor Mairukh Khan  and
+      Mahi, Abu Bakar Siddique",
+    editor = "Merchant, Rayyan  and
+      Megerdoomian, Karine",
+    booktitle = "The Proceedings of the First Workshop on {NLP} and {LLM}s for the {I}ranian Language Family",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.silkroadnlp-1.10/",
+    doi = "10.18653/v1/2026.silkroadnlp-1.10",
+    pages = "98--104",
+    ISBN = "979-8-89176-371-5",
+```
